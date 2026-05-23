@@ -14,6 +14,7 @@ qa.html            QA Pipeline mockup
 discharge.html     Discharge & Transfer mockup
 poc.html           POC Pipeline mockup
 md-orders.html     MD Order Pipeline mockup
+referral.html      Referral Tracker mockup
 cms-trends.html    CMS Trends mockup
 dasha.html         Dasha AI assistant mockup
 vsm.html           Current → Future state transformation narrative
