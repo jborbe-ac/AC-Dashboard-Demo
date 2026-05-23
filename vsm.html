@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VSM Transformation &middot; AC HHS Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html">Overview</a>
+      <a href="oasis.html">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html">Discharge</a>
+      <a href="poc.html">POC</a>
+      <a href="md-orders.html">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html">Dasha</a>
+      <a href="vsm.html" class="active">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> Vendor partners referred to generically.
+</div>
+
+<div class="container">
+
+  <header class="dash-header">
+    <div class="dash-header-inner">
+      <div class="dash-title-block">
+        <div class="dash-logo">&#9881;</div>
+        <div>
+          <div class="dash-eyebrow">AC HHS Operations</div>
+          <h1 class="dash-title">VSM Transformation Story</h1>
+        </div>
+      </div>
+      <div class="dash-header-stats">
+        <div class="header-stat">
+          <div class="header-stat-label">Value-Add Ratio</div>
+          <div class="header-stat-value">34% &rarr; 96%</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">NVA Time</div>
+          <div class="header-stat-value">23d &rarr; 2d</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel" style="margin-bottom: 24px;">
+    <p style="font-size: 14px; line-height: 1.7; color: var(--text);">
+      In early 2026, AC HHS conducted a value stream mapping exercise across the entire OASIS-to-billing workflow. The audit revealed a single redundant step, a fragmented QA process spread across multiple vendors, and a near-complete absence of daily pipeline visibility &mdash; almost a third of the cycle time was spent waiting between handoffs.
+      <br/><br/>
+      The post-redesign workflow is built around a tighter vendor structure (clinician &rarr; coding vendor &rarr; QA/POC vendor &rarr; billing vendor), a single source of truth in this dashboard, and daily review cadence. The lead time is now intentionally aligned to the 30-day care cycle &mdash; longer in total clock time, but with non-value-added wait collapsed from ~23 days down to ~2.
+    </p>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Before vs After</h2>
+    <span class="section-sub">Pre-Feb 2026 vs current state</span>
+  </div>
+
+  <div class="two-col">
+    <div class="vsm-state-card before">
+      <div class="dash-eyebrow">Current State (pre-Feb 2026)</div>
+      <h3>Fragmented &amp; reactive</h3>
+      <div class="vsm-state-metrics">
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Value-Add Ratio</span>
+          <span class="vsm-metric-value">34%</span>
+        </div>
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Total Lead Time</span>
+          <span class="vsm-metric-value">~35 days</span>
+        </div>
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Value-Added Time</span>
+          <span class="vsm-metric-value">~12 days</span>
+        </div>
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Non-Value-Added Time</span>
+          <span class="vsm-metric-value">~23 days</span>
+        </div>
+      </div>
+      <ul>
+        <li>Redundant CM Audit step duplicating QA1 review</li>
+        <li>QA work split across multiple vendors with handoff friction</li>
+        <li>No daily visibility &mdash; status known only at month-end</li>
+        <li>Exceptions discovered late, often after CMS deadlines</li>
+      </ul>
+    </div>
+    <div class="vsm-state-card after">
+      <div class="dash-eyebrow">Future State (now)</div>
+      <h3>Aligned &amp; transparent</h3>
+      <div class="vsm-state-metrics">
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Value-Add Ratio</span>
+          <span class="vsm-metric-value">96%</span>
+        </div>
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Total Lead Time</span>
+          <span class="vsm-metric-value">~50 days</span>
+        </div>
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Value-Added Time</span>
+          <span class="vsm-metric-value">~48 days</span>
+        </div>
+        <div class="vsm-metric">
+          <span class="vsm-metric-label">Non-Value-Added Time</span>
+          <span class="vsm-metric-value">~2 days</span>
+        </div>
+      </div>
+      <ul>
+        <li>Single consolidated QA/POC vendor &mdash; one handoff, not three</li>
+        <li>Lead time intentionally aligned to the 30-day care cycle</li>
+        <li>Daily pipeline visibility via this dashboard</li>
+        <li>Exceptions surfaced same-day, well before deadlines</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Process Flow (Future State)</h2>
+    <span class="section-sub">Eight steps &middot; four owners</span>
+  </div>
+
+  <div class="vsm-flow">
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 1</div>
+      <div class="vsm-step-name">OASIS Documentation</div>
+      <div class="vsm-step-owner">Owner: Clinician</div>
+      <span class="vsm-step-target">Target: 2d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 2</div>
+      <div class="vsm-step-name">Coding</div>
+      <div class="vsm-step-owner">Owner: Coding Vendor</div>
+      <span class="vsm-step-target">Target: 2d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 3</div>
+      <div class="vsm-step-name">Initial OASIS Review (QA1)</div>
+      <div class="vsm-step-owner">Owner: QA/POC Vendor</div>
+      <span class="vsm-step-target">Target: 2d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 4</div>
+      <div class="vsm-step-name">OASIS Correction</div>
+      <div class="vsm-step-owner">Owner: Clinician</div>
+      <span class="vsm-step-target">Target: 2d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 5</div>
+      <div class="vsm-step-name">POC Completion</div>
+      <div class="vsm-step-owner">Owner: QA/POC Vendor</div>
+      <span class="vsm-step-target">Target: 2d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 6</div>
+      <div class="vsm-step-name">POC Faxing</div>
+      <div class="vsm-step-owner">Owner: QA/POC Vendor</div>
+      <span class="vsm-step-target">Target: 2d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 7</div>
+      <div class="vsm-step-name">MD Signature</div>
+      <div class="vsm-step-owner">Owner: Physician</div>
+      <span class="vsm-step-target">Target: 7d</span>
+    </div>
+    <div class="vsm-step">
+      <div class="vsm-step-num">Step 8</div>
+      <div class="vsm-step-name">Billing Processing</div>
+      <div class="vsm-step-owner">Owner: Billing Vendor</div>
+      <span class="vsm-step-target">Target: 10d</span>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>What Changed</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="content-card">
+      <h3>Structural changes</h3>
+      <p>
+        <strong style="color:var(--good);">CM Audit step eliminated.</strong> The earlier process inserted a Care Management audit between Coding and QA1; the audit was redundant with QA1's same scope of review. Removing it cut roughly 4&ndash;6 days of waiting per chart.
+        <br/><br/>
+        <strong style="color:var(--good);">QA consolidated under one vendor.</strong> Previously, three different vendors touched the QA, POC creation, and POC faxing steps. The work is now consolidated under a single QA/POC vendor with one queue, one SLA, and one point of contact.
+        <br/><br/>
+        <strong style="color:var(--good);">Daily pipeline visibility.</strong> Each step's queue is now tracked in real time on this dashboard, so exceptions surface the day they happen rather than at month-end review.
+      </p>
+    </div>
+    <div class="content-card">
+      <h3>Remaining gaps</h3>
+      <p>
+        Two stages are still missing target as of April 2026:
+        <br/><br/>
+        &bull; <strong style="color:var(--warn);">QA1 Review</strong> &mdash; running at 4.67d against a 2d target. Capacity on the QA vendor side is the constraint; cross-training a second reviewer is in progress.
+        <br/><br/>
+        &bull; <strong style="color:var(--warn);">POC Completion</strong> &mdash; running at 3.5d against a 2d target. Closely tied to QA1 throughput &mdash; many POCs sit waiting because the chart is still upstream in QA1.
+        <br/><br/>
+        Closing both gaps would put the agency at 100% target attainment across the full pipeline.
+      </p>
+    </div>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AC HHS Operations Dashboard — Prototype</title>
+  <meta name="description" content="Prototype of the AC HHS home health operations dashboard — track OASIS-to-billing workflow in one place." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html" class="active">Overview</a>
+      <a href="oasis.html">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html">Discharge</a>
+      <a href="poc.html">POC</a>
+      <a href="md-orders.html">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html">Dasha</a>
+      <a href="vsm.html">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> All clinician identities and chart records below are anonymized. Aggregate numbers reflect real April 2026 operations; row-level samples are synthetic.
+</div>
+
+<div class="container">
+
+  <section class="hero">
+    <span class="eyebrow">AC HHS Operations Platform</span>
+    <h1>Track the full <span class="accent-text">OASIS-to-billing workflow</span> in one place.</h1>
+    <p>A daily operations dashboard for home health agencies — from documentation through QA review, plan of care, MD signature, and billing. Built on real-time Google Sheets data with a Claude-powered analyst sitting alongside it.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="oasis.html">Explore the dashboard &rarr;</a>
+      <a class="btn btn-secondary" href="vsm.html">See the transformation story</a>
+    </div>
+  </section>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>April 2026 Operational Snapshot</h2>
+    <span class="section-sub">All targets hit or improving</span>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">OASIS Documentation</div>
+      <div class="kpi-value">1.67d</div>
+      <div class="kpi-sub good">&#9679; Under 2d target</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Total Process Lead Time</div>
+      <div class="kpi-value">14.7d</div>
+      <div class="kpi-sub good">&#9679; vs 30d target</div>
+    </div>
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">OASIS On-Time Rate</div>
+      <div class="kpi-value">89%</div>
+      <div class="kpi-sub">Trending toward 95%</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">MD Signature</div>
+      <div class="kpi-value">5.57d</div>
+      <div class="kpi-sub good">&#9679; Under 7d target</div>
+    </div>
+    <div class="kpi-card accent-purple">
+      <div class="kpi-label">Value-Add Ratio</div>
+      <div class="kpi-value">96%</div>
+      <div class="kpi-sub">Up from 34% pre-redesign</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Explore the Pipeline</h2>
+    <span class="section-sub">Eight surfaces &middot; one source of truth</span>
+  </div>
+
+  <div class="page-grid">
+    <a class="page-card" href="oasis.html">
+      <div class="page-card-icon">&#9202;</div>
+      <div class="page-card-title">OASIS Pipeline</div>
+      <div class="page-card-desc">Documentation timeliness, cycle-time trend, and per-clinician scorecards.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="qa.html">
+      <div class="page-card-icon">&#10003;</div>
+      <div class="page-card-title">QA Pipeline</div>
+      <div class="page-card-desc">Stage-by-stage queue depth, bottleneck heatmap, and pending review items.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="discharge.html">
+      <div class="page-card-icon">&#8631;</div>
+      <div class="page-card-title">Discharge &amp; Transfer</div>
+      <div class="page-card-desc">Discharge OASIS timeliness, reason breakdown, and 6-month trend.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="poc.html">
+      <div class="page-card-icon">&#9783;</div>
+      <div class="page-card-title">POC Pipeline</div>
+      <div class="page-card-desc">Plan of care creation, faxing, and physician signature throughput.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="md-orders.html">
+      <div class="page-card-icon">&#9998;</div>
+      <div class="page-card-title">MD Order Pipeline</div>
+      <div class="page-card-desc">Outstanding orders by urgency, return rate, and physician group performance.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="cms-trends.html">
+      <div class="page-card-icon">&#9650;</div>
+      <div class="page-card-title">CMS Trends</div>
+      <div class="page-card-desc">Outcome measures, CAHPS satisfaction, and benchmark comparisons.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="dasha.html">
+      <div class="page-card-icon">&#9881;</div>
+      <div class="page-card-title">Dasha</div>
+      <div class="page-card-desc">A conversational analyst — ask Dasha anything about the live data.</div>
+      <span class="page-card-link">View dashboard &rarr;</span>
+    </a>
+    <a class="page-card" href="vsm.html">
+      <div class="page-card-icon">&#9881;</div>
+      <div class="page-card-title">VSM Transformation</div>
+      <div class="page-card-desc">How early-2026 redesign moved value-add ratio from 34% to 96%.</div>
+      <span class="page-card-link">View story &rarr;</span>
+    </a>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>What this prototype demonstrates</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="content-card">
+      <h3>The operational story</h3>
+      <p>Home health agencies juggle a tightly choreographed sequence — clinician documentation, coding, QA review, plan of care, physician signature, and billing. Each step has a CMS-driven target. Each delay compounds into late billing, lost revenue, and lower outcome scores. This dashboard turns that workflow from a spreadsheet exercise into a live operating picture.</p>
+    </div>
+    <div class="content-card">
+      <h3>The platform behind it</h3>
+      <p>The live application is a Streamlit app backed by Google Sheets, with a Claude-powered analyst (&ldquo;Dasha&rdquo;) grounded in the same data. Aggregations refresh on every page load; status pills, urgency cues, and CMS benchmarks are computed against rolling 12-month windows. This static prototype mirrors the visual system without exposing any PHI.</p>
+    </div>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

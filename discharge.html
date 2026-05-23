@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discharge &amp; Transfer &middot; AC HHS Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html">Overview</a>
+      <a href="oasis.html">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html" class="active">Discharge</a>
+      <a href="poc.html">POC</a>
+      <a href="md-orders.html">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html">Dasha</a>
+      <a href="vsm.html">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> Sample discharge rows are synthetic.
+</div>
+
+<div class="container">
+
+  <header class="dash-header">
+    <div class="dash-header-inner">
+      <div class="dash-title-block">
+        <div class="dash-logo">&#8631;</div>
+        <div>
+          <div class="dash-eyebrow">AC HHS Operations</div>
+          <h1 class="dash-title">Discharge &amp; Transfer</h1>
+        </div>
+      </div>
+      <div class="dash-header-stats">
+        <div class="header-stat">
+          <div class="header-stat-label">Reporting Period</div>
+          <div class="header-stat-value">April 2026</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">Discharges</div>
+          <div class="header-stat-value">38</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">On-Time Rate</div>
+          <div class="header-stat-value">97%</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">Total Discharges</div>
+      <div class="kpi-value">38</div>
+      <div class="kpi-sub">DC + Transfer combined</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">On Time</div>
+      <div class="kpi-value">97%</div>
+      <div class="kpi-sub good">&#9679; +1pp vs March</div>
+    </div>
+    <div class="kpi-card accent-yellow">
+      <div class="kpi-label">At Risk</div>
+      <div class="kpi-value">1</div>
+      <div class="kpi-sub warn">3% of total</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Late</div>
+      <div class="kpi-value">0</div>
+      <div class="kpi-sub good">0% &middot; perfect month</div>
+    </div>
+    <div class="kpi-card accent-purple">
+      <div class="kpi-label">Avg DC OASIS Time</div>
+      <div class="kpi-value">4.2d</div>
+      <div class="kpi-sub good">vs 5d target</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Discharge Reason Breakdown</h2>
+    <span class="section-sub">38 patients &middot; April 2026</span>
+  </div>
+
+  <div class="panel">
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Goals Met</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 100%;"></div></div>
+        <div class="bar-value">22</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Hospitalization</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 41%;"></div></div>
+        <div class="bar-value">9</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Higher Level of Care</div>
+        <div class="bar-track"><div class="bar-fill yellow" style="width: 18%;"></div></div>
+        <div class="bar-value">4</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Patient/Family Choice</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 9%;"></div></div>
+        <div class="bar-value">2</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Expired</div>
+        <div class="bar-track"><div class="bar-fill red" style="width: 4%;"></div></div>
+        <div class="bar-value">1</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Discharge Timeliness Trend</h2>
+    <span class="section-sub">Target: 95%</span>
+  </div>
+
+  <div class="trend-chart">
+    <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dc-area" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#34d399" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <g stroke="#1a3a6c" stroke-width="1" stroke-dasharray="3 4">
+        <line x1="60" y1="40"  x2="700" y2="40"/>
+        <line x1="60" y1="80"  x2="700" y2="80"/>
+        <line x1="60" y1="120" x2="700" y2="120"/>
+        <line x1="60" y1="160" x2="700" y2="160"/>
+      </g>
+      <g fill="#6b90bf" font-size="10" font-family="Inter" font-weight="600">
+        <text x="50" y="44" text-anchor="end">100%</text>
+        <text x="50" y="84" text-anchor="end">95%</text>
+        <text x="50" y="124" text-anchor="end">90%</text>
+        <text x="50" y="164" text-anchor="end">85%</text>
+      </g>
+      <!-- Target line at 95% -->
+      <line x1="60" y1="80" x2="700" y2="80" stroke="#34d399" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8"/>
+      <text x="700" y="75" fill="#34d399" font-size="10" font-family="Inter" font-weight="700" text-anchor="end">Target 95%</text>
+
+      <!-- Nov 89, Dec 91, Jan 88, Feb 94, Mar 96, Apr 97 -->
+      <!-- y = 173 - (pct-85)*40/5 -->
+      <!-- Nov 89 -> 173 - 4*8 = 141 -->
+      <!-- Dec 91 -> 173 - 6*8 = 125 -->
+      <!-- Jan 88 -> 173 - 3*8 = 149 -->
+      <!-- Feb 94 -> 173 - 9*8 = 101 -->
+      <!-- Mar 96 -> 173 - 11*8 = 85 -->
+      <!-- Apr 97 -> 173 - 12*8 = 77 -->
+      <path d="M 100 173 L 100 141 L 220 125 L 340 149 L 460 101 L 580 85 L 660 77 L 660 173 Z"
+            fill="url(#dc-area)"/>
+      <path d="M 100 141 L 220 125 L 340 149 L 460 101 L 580 85 L 660 77"
+            fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#34d399">
+        <circle cx="100" cy="141" r="5"/>
+        <circle cx="220" cy="125" r="5"/>
+        <circle cx="340" cy="149" r="5"/>
+        <circle cx="460" cy="101" r="5"/>
+        <circle cx="580" cy="85"  r="5"/>
+        <circle cx="660" cy="77"  r="6"/>
+      </g>
+      <g fill="#e0f2fe" font-size="11" font-family="Inter" font-weight="700">
+        <text x="100" y="131" text-anchor="middle">89%</text>
+        <text x="220" y="115" text-anchor="middle">91%</text>
+        <text x="340" y="139" text-anchor="middle">88%</text>
+        <text x="460" y="91" text-anchor="middle">94%</text>
+        <text x="580" y="75" text-anchor="middle">96%</text>
+        <text x="660" y="67" text-anchor="middle">97%</text>
+      </g>
+      <g fill="#6b90bf" font-size="10" font-family="Inter" font-weight="600">
+        <text x="100" y="200" text-anchor="middle">Nov 25</text>
+        <text x="220" y="200" text-anchor="middle">Dec 25</text>
+        <text x="340" y="200" text-anchor="middle">Jan 26</text>
+        <text x="460" y="200" text-anchor="middle">Feb 26</text>
+        <text x="580" y="200" text-anchor="middle">Mar 26</text>
+        <text x="660" y="200" text-anchor="middle">Apr 26</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Recent Discharges</h2>
+    <span class="section-sub">Last 6 completed</span>
+  </div>
+
+  <div class="pipeline-table-wrap">
+    <table class="pipeline-table">
+      <thead>
+        <tr>
+          <th>Chart ID</th>
+          <th>Type</th>
+          <th>Clinician</th>
+          <th>DC Date</th>
+          <th>Days to Doc</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P-0202</td>
+          <td><span class="pill pill-green">Discharge</span></td>
+          <td>Clinician B</td>
+          <td>04/22/2026</td>
+          <td class="num">2</td>
+          <td>Goals Met</td>
+        </tr>
+        <tr>
+          <td>P-0198</td>
+          <td><span class="pill pill-orange">Transfer</span></td>
+          <td>Clinician D</td>
+          <td>04/21/2026</td>
+          <td class="num">3</td>
+          <td>Hospitalization</td>
+        </tr>
+        <tr>
+          <td>P-0184</td>
+          <td><span class="pill pill-green">Discharge</span></td>
+          <td>Clinician E</td>
+          <td>04/19/2026</td>
+          <td class="num">4</td>
+          <td>Goals Met</td>
+        </tr>
+        <tr>
+          <td>P-0172</td>
+          <td><span class="pill pill-yellow">Transfer</span></td>
+          <td>Clinician B</td>
+          <td>04/17/2026</td>
+          <td class="num">5</td>
+          <td>Higher Level of Care</td>
+        </tr>
+        <tr>
+          <td>P-0165</td>
+          <td><span class="pill pill-green">Discharge</span></td>
+          <td>Clinician D</td>
+          <td>04/15/2026</td>
+          <td class="num">3</td>
+          <td>Patient/Family Choice</td>
+        </tr>
+        <tr>
+          <td>P-0158</td>
+          <td><span class="pill pill-orange">Transfer</span></td>
+          <td>Clinician E</td>
+          <td>04/14/2026</td>
+          <td class="num">4</td>
+          <td>Hospitalization</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

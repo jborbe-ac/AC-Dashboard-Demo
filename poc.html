@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POC Pipeline &middot; AC HHS Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html">Overview</a>
+      <a href="oasis.html">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html">Discharge</a>
+      <a href="poc.html" class="active">POC</a>
+      <a href="md-orders.html">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html">Dasha</a>
+      <a href="vsm.html">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> Physician practice groups are placeholders. Sample chart IDs are synthetic.
+</div>
+
+<div class="container">
+
+  <header class="dash-header">
+    <div class="dash-header-inner">
+      <div class="dash-title-block">
+        <div class="dash-logo">&#9783;</div>
+        <div>
+          <div class="dash-eyebrow">AC HHS Operations</div>
+          <h1 class="dash-title">POC Pipeline</h1>
+        </div>
+      </div>
+      <div class="dash-header-stats">
+        <div class="header-stat">
+          <div class="header-stat-label">Reporting Period</div>
+          <div class="header-stat-value">April 2026</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">POCs Issued</div>
+          <div class="header-stat-value">109</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">Signed Rate</div>
+          <div class="header-stat-value">85%</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">Total POCs</div>
+      <div class="kpi-value">109</div>
+      <div class="kpi-sub">Issued this month</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Faxed</div>
+      <div class="kpi-value">102</div>
+      <div class="kpi-sub good">94% of issued</div>
+    </div>
+    <div class="kpi-card accent-yellow">
+      <div class="kpi-label">Signed by MD</div>
+      <div class="kpi-value">87</div>
+      <div class="kpi-sub warn">85% of faxed</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Avg Fax Time</div>
+      <div class="kpi-value">0.0d</div>
+      <div class="kpi-sub good">Same-day faxing</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Avg MD Signature</div>
+      <div class="kpi-value">5.57d</div>
+      <div class="kpi-sub good">vs 7d target</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Physician Signing Rate by Cohort</h2>
+    <span class="section-sub">Signed / Pending / Returned for changes</span>
+  </div>
+
+  <div class="panel">
+    <div class="stacked-row">
+      <div class="bar-label">Jan 2026</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 78%;">78% signed</div>
+        <div class="stacked-seg yellow" style="width: 14%;">14%</div>
+        <div class="stacked-seg red" style="width: 8%;">8%</div>
+      </div>
+      <div class="bar-value">94 POCs</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Feb 2026</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 82%;">82% signed</div>
+        <div class="stacked-seg yellow" style="width: 12%;">12%</div>
+        <div class="stacked-seg red" style="width: 6%;">6%</div>
+      </div>
+      <div class="bar-value">98 POCs</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Mar 2026</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 84%;">84% signed</div>
+        <div class="stacked-seg yellow" style="width: 11%;">11%</div>
+        <div class="stacked-seg red" style="width: 5%;">5%</div>
+      </div>
+      <div class="bar-value">104 POCs</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Apr 2026</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 85%;">85% signed</div>
+        <div class="stacked-seg yellow" style="width: 11%;">11%</div>
+        <div class="stacked-seg red" style="width: 4%;">4%</div>
+      </div>
+      <div class="bar-value">109 POCs</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Awaiting Signature Queue</h2>
+    <span class="section-sub">15 POCs faxed and pending MD response</span>
+  </div>
+
+  <div class="pipeline-table-wrap">
+    <table class="pipeline-table">
+      <thead>
+        <tr>
+          <th>Chart ID</th>
+          <th>Faxed</th>
+          <th>Days Awaiting</th>
+          <th>Physician Group</th>
+          <th>Cohort</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P-0145</td>
+          <td>04/10/2026</td>
+          <td class="num">12</td>
+          <td>Group A</td>
+          <td>SOC</td>
+          <td><span class="pill pill-red">Overdue</span></td>
+        </tr>
+        <tr>
+          <td>P-0138</td>
+          <td>04/12/2026</td>
+          <td class="num">10</td>
+          <td>Group D</td>
+          <td>SOC</td>
+          <td><span class="pill pill-red">Overdue</span></td>
+        </tr>
+        <tr>
+          <td>P-0124</td>
+          <td>04/14/2026</td>
+          <td class="num">8</td>
+          <td>Group A</td>
+          <td>Recert</td>
+          <td><span class="pill pill-red">Overdue</span></td>
+        </tr>
+        <tr>
+          <td>P-0117</td>
+          <td>04/15/2026</td>
+          <td class="num">7</td>
+          <td>Group B</td>
+          <td>SOC</td>
+          <td><span class="pill pill-yellow">Near limit</span></td>
+        </tr>
+        <tr>
+          <td>P-0109</td>
+          <td>04/17/2026</td>
+          <td class="num">5</td>
+          <td>Group C</td>
+          <td>ROC</td>
+          <td><span class="pill pill-yellow">Approaching</span></td>
+        </tr>
+        <tr>
+          <td>P-0102</td>
+          <td>04/20/2026</td>
+          <td class="num">2</td>
+          <td>Group B</td>
+          <td>SOC</td>
+          <td><span class="pill pill-green">Tracking</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

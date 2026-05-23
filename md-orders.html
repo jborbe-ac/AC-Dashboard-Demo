@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Order Pipeline &middot; AC HHS Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html">Overview</a>
+      <a href="oasis.html">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html">Discharge</a>
+      <a href="poc.html">POC</a>
+      <a href="md-orders.html" class="active">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html">Dasha</a>
+      <a href="vsm.html">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> Physician practice groups are placeholders.
+</div>
+
+<div class="container">
+
+  <header class="dash-header">
+    <div class="dash-header-inner">
+      <div class="dash-title-block">
+        <div class="dash-logo">&#9998;</div>
+        <div>
+          <div class="dash-eyebrow">AC HHS Operations</div>
+          <h1 class="dash-title">MD Order Pipeline</h1>
+        </div>
+      </div>
+      <div class="dash-header-stats">
+        <div class="header-stat">
+          <div class="header-stat-label">Reporting Period</div>
+          <div class="header-stat-value">April 2026</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">Open Orders</div>
+          <div class="header-stat-value">24</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">Avg Return</div>
+          <div class="header-stat-value">6.3d</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">Open Orders</div>
+      <div class="kpi-value">24</div>
+      <div class="kpi-sub">All cohorts combined</div>
+    </div>
+    <div class="kpi-card accent-red">
+      <div class="kpi-label">Urgent</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-sub bad">Med change / Stat</div>
+    </div>
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">Standard</div>
+      <div class="kpi-value">18</div>
+      <div class="kpi-sub">Routine / DME / Therapy</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Returned This Month</div>
+      <div class="kpi-value">41</div>
+      <div class="kpi-sub good">+8 vs March</div>
+    </div>
+    <div class="kpi-card accent-purple">
+      <div class="kpi-label">Avg Return Time</div>
+      <div class="kpi-value">6.3d</div>
+      <div class="kpi-sub">vs 7d target</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Urgency Distribution</h2>
+  </div>
+
+  <div class="panel">
+    <div class="summary-row">
+      <span class="pill pill-red">3 Urgent</span>
+      <span class="pill pill-orange">5 Priority</span>
+      <span class="pill pill-blue">12 Routine</span>
+      <span class="pill pill-gray">4 Low</span>
+    </div>
+    <div class="spacer-sm"></div>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Urgent</div>
+        <div class="bar-track"><div class="bar-fill red" style="width: 25%;"></div></div>
+        <div class="bar-value">3</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Priority</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 42%;"></div></div>
+        <div class="bar-value">5</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Routine</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 100%;"></div></div>
+        <div class="bar-value">12</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Low</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 33%;"></div></div>
+        <div class="bar-value">4</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Physician Return Rate</h2>
+    <span class="section-sub">% of orders returned within 7 days</span>
+  </div>
+
+  <div class="panel">
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Group B</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 94%;"></div></div>
+        <div class="bar-value">94%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Group C</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 87%;"></div></div>
+        <div class="bar-value">87%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Group A</div>
+        <div class="bar-track"><div class="bar-fill yellow" style="width: 72%;"></div></div>
+        <div class="bar-value">72%</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Group D</div>
+        <div class="bar-track"><div class="bar-fill red" style="width: 58%;"></div></div>
+        <div class="bar-value">58%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Outstanding Orders</h2>
+    <span class="section-sub">Ordered by days open</span>
+  </div>
+
+  <div class="pipeline-table-wrap">
+    <table class="pipeline-table">
+      <thead>
+        <tr>
+          <th>Chart ID</th>
+          <th>Order Type</th>
+          <th>Group</th>
+          <th>Days Open</th>
+          <th>Urgency</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P-0087</td>
+          <td>Med Change</td>
+          <td>Group D</td>
+          <td class="num">14</td>
+          <td><span class="pill pill-red">Urgent</span></td>
+          <td><span class="pill pill-red">Escalated</span></td>
+        </tr>
+        <tr>
+          <td>P-0079</td>
+          <td>DME</td>
+          <td>Group A</td>
+          <td class="num">11</td>
+          <td><span class="pill pill-orange">Priority</span></td>
+          <td><span class="pill pill-red">Overdue</span></td>
+        </tr>
+        <tr>
+          <td>P-0071</td>
+          <td>Med Change</td>
+          <td>Group D</td>
+          <td class="num">9</td>
+          <td><span class="pill pill-red">Urgent</span></td>
+          <td><span class="pill pill-red">Overdue</span></td>
+        </tr>
+        <tr>
+          <td>P-0064</td>
+          <td>Therapy</td>
+          <td>Group A</td>
+          <td class="num">7</td>
+          <td><span class="pill pill-blue">Routine</span></td>
+          <td><span class="pill pill-yellow">At limit</span></td>
+        </tr>
+        <tr>
+          <td>P-0058</td>
+          <td>Routine</td>
+          <td>Group B</td>
+          <td class="num">4</td>
+          <td><span class="pill pill-blue">Routine</span></td>
+          <td><span class="pill pill-green">Tracking</span></td>
+        </tr>
+        <tr>
+          <td>P-0051</td>
+          <td>DME</td>
+          <td>Group C</td>
+          <td class="num">2</td>
+          <td><span class="pill pill-gray">Low</span></td>
+          <td><span class="pill pill-green">Tracking</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

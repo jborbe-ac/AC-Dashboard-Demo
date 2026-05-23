@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dasha &middot; AC HHS Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html">Overview</a>
+      <a href="oasis.html">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html">Discharge</a>
+      <a href="poc.html">POC</a>
+      <a href="md-orders.html">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html" class="active">Dasha</a>
+      <a href="vsm.html">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> This is a static mockup of the Dasha chat surface. No live conversation is happening.
+</div>
+
+<div class="container">
+
+  <header class="dash-header">
+    <div class="dash-header-inner">
+      <div class="dash-title-block">
+        <div class="dash-logo">&#9881;</div>
+        <div>
+          <div class="dash-eyebrow">AC HHS Operations</div>
+          <h1 class="dash-title">Dasha &mdash; AI Assistant</h1>
+        </div>
+      </div>
+      <div class="dash-header-stats">
+        <div class="header-stat">
+          <div class="header-stat-label">Powered By</div>
+          <div class="header-stat-value">Claude Haiku</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">Grounded On</div>
+          <div class="header-stat-value">Live Sheet</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel" style="margin-bottom: 24px;">
+    <p style="font-size: 14px; line-height: 1.6; color: var(--text);">
+      Ask Dasha anything about the live dashboard data &mdash; powered by Claude Haiku and grounded in current Google Sheet context. Dasha analyzes the same operational data shown across the dashboard surfaces, with the ability to summarize, compare periods, and flag emerging risks.
+    </p>
+  </div>
+
+  <div class="chat-shell">
+    <div class="chat-msg user">
+      <div class="chat-avatar user">JB</div>
+      <div class="chat-bubble">Which step is our biggest bottleneck right now?</div>
+    </div>
+
+    <div class="chat-msg ai">
+      <div class="chat-avatar ai">D</div>
+      <div class="chat-bubble">
+        Based on April data, <strong>QA1 Review at 4.67 days</strong> is the biggest gap against target (2d). It's adding roughly 2.5 days to total lead time vs. plan.
+        <br/><br/>
+        <strong>Context:</strong> only 5 of 8 charts in QA Review queue moved through on time this week. POC Completion at <code>3.5d</code> is the second-biggest gap. Every other stage is at or under target.
+        <br/><br/>
+        <strong>Suggested next step:</strong> review QA capacity for the week of 04/15 &mdash; that's where most of the delay accumulated.
+      </div>
+    </div>
+
+    <div class="chat-msg user">
+      <div class="chat-avatar user">JB</div>
+      <div class="chat-bubble">Which clinicians need coaching support?</div>
+    </div>
+
+    <div class="chat-msg ai">
+      <div class="chat-avatar ai">D</div>
+      <div class="chat-bubble">
+        Clinicians A, C, and F are running significantly above the 2-day OASIS documentation target this month:
+        <br/><br/>
+        &bull; <strong>Clinician A</strong> &mdash; 24.8d avg doc time, 27% on-time across 27 charts (highest volume in the at-risk group)<br/>
+        &bull; <strong>Clinician C</strong> &mdash; 7.7d avg doc time, 0% on-time across 6 charts<br/>
+        &bull; <strong>Clinician F</strong> &mdash; 20.7d avg doc time, 0% on-time across 3 charts
+        <br/><br/>
+        For comparison, Clinicians B and D are exceeding the target (97% and 89% on-time respectively). Recommend prioritizing 1:1 coaching with Clinician A first &mdash; the volume there is driving most of the aggregate variance.
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <div class="field">Ask Dasha about the April pipeline...</div>
+      <span class="send-btn">Send</span>
+    </div>
+
+    <div class="suggest-row">
+      <span class="suggest-btn">Show me April performance</span>
+      <span class="suggest-btn">Compare to last month</span>
+      <span class="suggest-btn">Which charts are at risk?</span>
+      <span class="suggest-btn">Summarize CMS outcomes</span>
+    </div>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

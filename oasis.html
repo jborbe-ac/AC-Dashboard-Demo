@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OASIS Pipeline &middot; AC HHS Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<nav class="demo-nav">
+  <div class="demo-nav-inner">
+    <div class="demo-brand">
+      <span class="demo-brand-mark">AC</span>
+      <span>AC HHS Dashboard</span>
+      <span class="demo-pill">Prototype</span>
+    </div>
+    <div class="demo-nav-links">
+      <a href="index.html">Overview</a>
+      <a href="oasis.html" class="active">OASIS</a>
+      <a href="qa.html">QA</a>
+      <a href="discharge.html">Discharge</a>
+      <a href="poc.html">POC</a>
+      <a href="md-orders.html">MD Orders</a>
+      <a href="cms-trends.html">CMS Trends</a>
+      <a href="dasha.html">Dasha</a>
+      <a href="vsm.html">VSM Story</a>
+    </div>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Prototype preview.</strong> Clinicians are labeled A–F. Sample row identifiers (P-####) are synthetic.
+</div>
+
+<div class="container">
+
+  <header class="dash-header">
+    <div class="dash-header-inner">
+      <div class="dash-title-block">
+        <div class="dash-logo">&#9202;</div>
+        <div>
+          <div class="dash-eyebrow">AC HHS Operations</div>
+          <h1 class="dash-title">OASIS Pipeline</h1>
+        </div>
+      </div>
+      <div class="dash-header-stats">
+        <div class="header-stat">
+          <div class="header-stat-label">Reporting Period</div>
+          <div class="header-stat-value">April 2026</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">Total Charts</div>
+          <div class="header-stat-value">109</div>
+        </div>
+        <div class="header-stat">
+          <div class="header-stat-label">On-Time Rate</div>
+          <div class="header-stat-value">89%</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">Total Charts</div>
+      <div class="kpi-value">109</div>
+      <div class="kpi-sub">SOC / ROC / Recert / DC</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">On Time</div>
+      <div class="kpi-value">89%</div>
+      <div class="kpi-sub good">&#9679; +5pp vs March</div>
+    </div>
+    <div class="kpi-card accent-yellow">
+      <div class="kpi-label">At Risk</div>
+      <div class="kpi-value">9</div>
+      <div class="kpi-sub warn">&#9679; 8% of total</div>
+    </div>
+    <div class="kpi-card accent-red">
+      <div class="kpi-label">Late</div>
+      <div class="kpi-value">3</div>
+      <div class="kpi-sub bad">&#9679; 3% of total</div>
+    </div>
+    <div class="kpi-card accent-purple">
+      <div class="kpi-label">Avg Doc Time</div>
+      <div class="kpi-value">1.7d</div>
+      <div class="kpi-sub good">vs 2d target</div>
+    </div>
+    <div class="kpi-card accent-purple">
+      <div class="kpi-label">Avg QA1 Review</div>
+      <div class="kpi-value">4.7d</div>
+      <div class="kpi-sub bad">vs 2d target</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Total Lead Time</div>
+      <div class="kpi-value">14.7d</div>
+      <div class="kpi-sub good">vs 30d target</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Pending OASIS Documentation</h2>
+    <span class="section-sub">12 in queue &middot; refreshed 4 min ago</span>
+  </div>
+
+  <div class="summary-row">
+    <span class="label">Queue health:</span>
+    <span class="pill pill-green">7 on track</span>
+    <span class="pill pill-yellow">3 at risk</span>
+    <span class="pill pill-red">2 late</span>
+  </div>
+
+  <div class="pipeline-table-wrap">
+    <table class="pipeline-table">
+      <thead>
+        <tr>
+          <th>Chart ID</th>
+          <th>Type</th>
+          <th>Clinician</th>
+          <th>Visit Date</th>
+          <th>Days Open</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P-0421</td>
+          <td>SOC</td>
+          <td>Clinician A</td>
+          <td>04/16/2026</td>
+          <td class="num">6</td>
+          <td><span class="pill pill-red">Late &middot; 4d over</span></td>
+        </tr>
+        <tr>
+          <td>P-0418</td>
+          <td>ROC</td>
+          <td>Clinician A</td>
+          <td>04/17/2026</td>
+          <td class="num">5</td>
+          <td><span class="pill pill-red">Late &middot; 3d over</span></td>
+        </tr>
+        <tr>
+          <td>P-0407</td>
+          <td>Recert</td>
+          <td>Clinician C</td>
+          <td>04/19/2026</td>
+          <td class="num">3</td>
+          <td><span class="pill pill-yellow">At risk</span></td>
+        </tr>
+        <tr>
+          <td>P-0394</td>
+          <td>SOC</td>
+          <td>Clinician A</td>
+          <td>04/20/2026</td>
+          <td class="num">2</td>
+          <td><span class="pill pill-yellow">At risk</span></td>
+        </tr>
+        <tr>
+          <td>P-0388</td>
+          <td>SOC</td>
+          <td>Clinician F</td>
+          <td>04/20/2026</td>
+          <td class="num">2</td>
+          <td><span class="pill pill-yellow">At risk</span></td>
+        </tr>
+        <tr>
+          <td>P-0376</td>
+          <td>ROC</td>
+          <td>Clinician E</td>
+          <td>04/21/2026</td>
+          <td class="num">1</td>
+          <td><span class="pill pill-green">On track</span></td>
+        </tr>
+        <tr>
+          <td>P-0371</td>
+          <td>SOC</td>
+          <td>Clinician B</td>
+          <td>04/21/2026</td>
+          <td class="num">1</td>
+          <td><span class="pill pill-green">On track</span></td>
+        </tr>
+        <tr>
+          <td>P-0365</td>
+          <td>Recert</td>
+          <td>Clinician D</td>
+          <td>04/22/2026</td>
+          <td class="num">0</td>
+          <td><span class="pill pill-green">On track</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Cycle Time Performance &mdash; Monthly</h2>
+    <span class="section-sub">Avg OASIS documentation days vs 2d target</span>
+  </div>
+
+  <div class="panel">
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label">Nov 2025</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 62%;"></div></div>
+        <div class="bar-value">2.4d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Dec 2025</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 70%;"></div></div>
+        <div class="bar-value">2.7d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Jan 2026</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 90%;"></div></div>
+        <div class="bar-value">3.5d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Feb 2026</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 54%;"></div></div>
+        <div class="bar-value">2.1d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Mar 2026</div>
+        <div class="bar-track"><div class="bar-fill blue" style="width: 46%;"></div></div>
+        <div class="bar-value">1.8d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Apr 2026</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 42%;"></div></div>
+        <div class="bar-value">1.7d</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>OASIS Timeliness by Clinician</h2>
+    <span class="section-sub">% on time / at risk / late</span>
+  </div>
+
+  <div class="panel">
+    <div class="stacked-row">
+      <div class="bar-label">Clinician B</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 97%;">97%</div>
+        <div class="stacked-seg yellow" style="width: 0%;"></div>
+        <div class="stacked-seg red" style="width: 3%;"></div>
+      </div>
+      <div class="bar-value">31 charts</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Clinician D</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 89%;">89%</div>
+        <div class="stacked-seg yellow" style="width: 11%;">11%</div>
+        <div class="stacked-seg red" style="width: 0%;"></div>
+      </div>
+      <div class="bar-value">19 charts</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Clinician E</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 76%;">76%</div>
+        <div class="stacked-seg yellow" style="width: 10%;">10%</div>
+        <div class="stacked-seg red" style="width: 14%;">14%</div>
+      </div>
+      <div class="bar-value">23 charts</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Clinician A</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 27%;">27%</div>
+        <div class="stacked-seg yellow" style="width: 6%;"></div>
+        <div class="stacked-seg red" style="width: 67%;">67%</div>
+      </div>
+      <div class="bar-value">27 charts</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Clinician C</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 0%;"></div>
+        <div class="stacked-seg yellow" style="width: 33%;">33%</div>
+        <div class="stacked-seg red" style="width: 67%;">67%</div>
+      </div>
+      <div class="bar-value">6 charts</div>
+    </div>
+    <div class="stacked-row">
+      <div class="bar-label">Clinician F</div>
+      <div class="stacked-bar">
+        <div class="stacked-seg green" style="width: 0%;"></div>
+        <div class="stacked-seg yellow" style="width: 0%;"></div>
+        <div class="stacked-seg red" style="width: 100%;">100%</div>
+      </div>
+      <div class="bar-value">3 charts</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Clinician Scorecard</h2>
+    <span class="section-sub">Sorted by on-time rate</span>
+  </div>
+
+  <div class="pipeline-table-wrap">
+    <table class="pipeline-table">
+      <thead>
+        <tr>
+          <th>Clinician</th>
+          <th>Charts</th>
+          <th>On Time %</th>
+          <th>Late %</th>
+          <th>Avg Doc</th>
+          <th>Avg Total</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Clinician B</td>
+          <td class="num">31</td>
+          <td class="num score-good">97%</td>
+          <td class="num score-good">3%</td>
+          <td class="num">1.6d</td>
+          <td class="num">14.1d</td>
+          <td><span class="pill pill-green">Exceeding</span></td>
+        </tr>
+        <tr>
+          <td>Clinician D</td>
+          <td class="num">19</td>
+          <td class="num score-good">89%</td>
+          <td class="num score-good">0%</td>
+          <td class="num">0.9d</td>
+          <td class="num">26.8d</td>
+          <td><span class="pill pill-green">On target</span></td>
+        </tr>
+        <tr>
+          <td>Clinician E</td>
+          <td class="num">23</td>
+          <td class="num score-warn">76%</td>
+          <td class="num score-warn">14%</td>
+          <td class="num">2.8d</td>
+          <td class="num">11.7d</td>
+          <td><span class="pill pill-yellow">Approaching</span></td>
+        </tr>
+        <tr>
+          <td>Clinician A</td>
+          <td class="num">27</td>
+          <td class="num score-bad">27%</td>
+          <td class="num score-bad">67%</td>
+          <td class="num">24.8d</td>
+          <td class="num">41.6d</td>
+          <td><span class="pill pill-red">Coaching</span></td>
+        </tr>
+        <tr>
+          <td>Clinician C</td>
+          <td class="num">6</td>
+          <td class="num score-bad">0%</td>
+          <td class="num score-bad">67%</td>
+          <td class="num">7.7d</td>
+          <td class="num">32.0d</td>
+          <td><span class="pill pill-red">Coaching</span></td>
+        </tr>
+        <tr>
+          <td>Clinician F</td>
+          <td class="num">3</td>
+          <td class="num score-bad">0%</td>
+          <td class="num score-bad">100%</td>
+          <td class="num">20.7d</td>
+          <td class="num">45.7d</td>
+          <td><span class="pill pill-red">Coaching</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
+    <h2>Monthly On-Time Rate</h2>
+    <span class="section-sub">Target: 95%</span>
+  </div>
+
+  <div class="trend-chart">
+    <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="oasis-area" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- Horizontal grid -->
+      <g stroke="#1a3a6c" stroke-width="1" stroke-dasharray="3 4">
+        <line x1="60" y1="40"  x2="700" y2="40"/>
+        <line x1="60" y1="80"  x2="700" y2="80"/>
+        <line x1="60" y1="120" x2="700" y2="120"/>
+        <line x1="60" y1="160" x2="700" y2="160"/>
+      </g>
+      <!-- Y axis labels -->
+      <g fill="#6b90bf" font-size="10" font-family="Inter" font-weight="600">
+        <text x="50" y="44" text-anchor="end">100%</text>
+        <text x="50" y="84" text-anchor="end">85%</text>
+        <text x="50" y="124" text-anchor="end">70%</text>
+        <text x="50" y="164" text-anchor="end">55%</text>
+      </g>
+      <!-- Target line at 95% -->
+      <line x1="60" y1="53" x2="700" y2="53" stroke="#34d399" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8"/>
+      <text x="700" y="48" fill="#34d399" font-size="10" font-family="Inter" font-weight="700" text-anchor="end">Target 95%</text>
+
+      <!-- Data points: Nov 78%, Dec 72%, Jan 58%, Feb 76%, Mar 84%, Apr 89% -->
+      <!-- x positions equally spaced: 100, 220, 340, 460, 580, 660 -->
+      <!-- y = 173 - (pct-55)*40/15 -->
+      <!-- Nov 78 -> y = 173 - 23*40/15 = 173 - 61.3 = 111.7 -->
+      <!-- Dec 72 -> y = 173 - 17*40/15 = 173 - 45.3 = 127.7 -->
+      <!-- Jan 58 -> y = 173 - 3*40/15 = 173 - 8 = 165 -->
+      <!-- Feb 76 -> y = 173 - 21*40/15 = 173 - 56 = 117 -->
+      <!-- Mar 84 -> y = 173 - 29*40/15 = 173 - 77.3 = 95.7 -->
+      <!-- Apr 89 -> y = 173 - 34*40/15 = 173 - 90.7 = 82.3 -->
+      <path d="M 100 173 L 100 112 L 220 128 L 340 165 L 460 117 L 580 96 L 660 82 L 660 173 Z"
+            fill="url(#oasis-area)" stroke="none"/>
+      <path d="M 100 112 L 220 128 L 340 165 L 460 117 L 580 96 L 660 82"
+            fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <g fill="#60a5fa">
+        <circle cx="100" cy="112" r="5"/>
+        <circle cx="220" cy="128" r="5"/>
+        <circle cx="340" cy="165" r="5"/>
+        <circle cx="460" cy="117" r="5"/>
+        <circle cx="580" cy="96" r="5"/>
+        <circle cx="660" cy="82" r="6" fill="#34d399"/>
+      </g>
+
+      <!-- Data labels -->
+      <g fill="#e0f2fe" font-size="11" font-family="Inter" font-weight="700">
+        <text x="100" y="100" text-anchor="middle">78%</text>
+        <text x="220" y="116" text-anchor="middle">72%</text>
+        <text x="340" y="153" text-anchor="middle">58%</text>
+        <text x="460" y="105" text-anchor="middle">76%</text>
+        <text x="580" y="84" text-anchor="middle">84%</text>
+        <text x="660" y="70" text-anchor="middle" fill="#34d399">89%</text>
+      </g>
+
+      <!-- X axis -->
+      <g fill="#6b90bf" font-size="10" font-family="Inter" font-weight="600">
+        <text x="100" y="200" text-anchor="middle">Nov 25</text>
+        <text x="220" y="200" text-anchor="middle">Dec 25</text>
+        <text x="340" y="200" text-anchor="middle">Jan 26</text>
+        <text x="460" y="200" text-anchor="middle">Feb 26</text>
+        <text x="580" y="200" text-anchor="middle">Mar 26</text>
+        <text x="660" y="200" text-anchor="middle">Apr 26</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="spacer-lg"></div>
+</div>
+
+<footer class="demo-footer">
+  <div class="demo-footer-row">
+    <div>&copy; 2026 AC HHS &middot; Prototype build &middot; All data anonymized</div>
+    <div><a href="index.html">Back to overview</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
