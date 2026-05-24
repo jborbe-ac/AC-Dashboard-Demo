@@ -329,7 +329,8 @@ p { margin: 0; color: var(--text-2); }
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .pipeline-table {
   width: 100%;
@@ -831,3 +832,79 @@ p { margin: 0; color: var(--text-2); }
   margin-bottom: 12px;
 }
 .summary-row .label { font-size: 12px; color: var(--muted); }
+
+/* ---------- Responsive: tablet ---------- */
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+
+  /* Nav stacks; links become a horizontal scroll strip */
+  .demo-nav-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px 16px;
+  }
+  .demo-nav-links {
+    margin-left: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 2px;
+    padding-bottom: 2px;
+    scrollbar-width: thin;
+  }
+  .demo-nav-links a { flex-shrink: 0; white-space: nowrap; }
+
+  .demo-banner { padding: 8px 16px; }
+
+  /* Dashboard header stacks */
+  .dash-header { padding: 20px; margin: 20px 0; }
+  .dash-header-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .dash-header-stats { gap: 20px; width: 100%; }
+  .header-stat {
+    border-left: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  /* Hero */
+  .hero { padding: 36px 0 24px; }
+  .hero h1 { font-size: 30px; }
+  .hero p { font-size: 15px; }
+  .hero-ctas .btn { flex: 1 1 auto; justify-content: center; }
+
+  h1 { font-size: 26px; }
+  .dash-title { font-size: 22px; }
+
+  /* Section header wraps cleanly */
+  .section-header { flex-wrap: wrap; }
+  .section-sub { margin-left: 0; flex-basis: 100%; }
+
+  /* KPI cards: two-up on tablet/phone */
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .kpi-card { padding: 14px; }
+  .kpi-value { font-size: 24px; }
+
+  /* Charts: tighter label/value columns */
+  .bar-row { grid-template-columns: 96px 1fr 46px; gap: 8px; }
+  .stacked-row { grid-template-columns: 84px 1fr 58px; gap: 8px; }
+  .grouped-bar-row { grid-template-columns: 1fr; gap: 8px; }
+
+  /* Tables scroll horizontally rather than crushing */
+  .pipeline-table { min-width: 560px; }
+
+  /* Chat bubbles use more width on small screens */
+  .chat-shell { padding: 16px; }
+  .chat-bubble { max-width: 85%; }
+
+  .demo-footer-row { flex-direction: column; text-align: center; }
+}
+
+/* ---------- Responsive: phone ---------- */
+@media (max-width: 440px) {
+  .hero h1 { font-size: 26px; }
+  .kpi-grid { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 80px 1fr 42px; }
+  .stacked-row { grid-template-columns: 72px 1fr 52px; font-size: 11px; }
+  .vsm-step { flex-basis: 78%; }
+}
