@@ -57,6 +57,7 @@ exports.handler = async function (event) {
     const body = JSON.parse(event.body || "{}");
     message = body.message;
     history = Array.isArray(body.history) ? body.history : [];
+    history = history.slice(-20);
   } catch {
     return {
       statusCode: 400,
@@ -71,6 +72,10 @@ exports.handler = async function (event) {
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       body: JSON.stringify({ error: "message field is required" }),
     };
+  }
+
+  if (message.trim().length > 2000) {
+    return { statusCode: 400, headers: CORS_HEADERS, body: JSON.stringify({ error: "Message too long" }) };
   }
 
   // Validate API key is present (never log or return it)
@@ -100,6 +105,8 @@ exports.handler = async function (event) {
   ];
 
   // Call Anthropic Messages API using Node 18 built-in fetch
+  const controller = new AbortController();
+  const fetchTimeout = setTimeout(() => controller.abort(), 8000);
   let anthropicResponse;
   try {
     anthropicResponse = await fetch(ANTHROPIC_API_URL, {
@@ -115,13 +122,23 @@ exports.handler = async function (event) {
         system: SYSTEM_PROMPT,
         messages,
       }),
+      signal: controller.signal,
     });
   } catch (fetchErr) {
+    if (fetchErr.name === "AbortError") {
+      return {
+        statusCode: 504,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        body: JSON.stringify({ error: "Request timed out" }),
+      };
+    }
     return {
       statusCode: 502,
       headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       body: JSON.stringify({ error: "Failed to reach AI service" }),
     };
+  } finally {
+    clearTimeout(fetchTimeout);
   }
 
   if (!anthropicResponse.ok) {
