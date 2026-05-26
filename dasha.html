@@ -31,7 +31,7 @@
 </nav>
 
 <div class="demo-banner">
-  <strong>Prototype preview.</strong> This is a static mockup of the Dasha chat surface. No live conversation is happening.
+  <strong>Prototype preview.</strong> Dasha AI is live &mdash; responses use aggregate April 2026 data only. No patient data is included.
 </div>
 
 <div class="container">
@@ -52,7 +52,7 @@
         </div>
         <div class="header-stat">
           <div class="header-stat-label">Grounded On</div>
-          <div class="header-stat-value">Live Sheet</div>
+          <div class="header-stat-value">Apr 2026 Data</div>
         </div>
       </div>
     </div>
@@ -65,43 +65,45 @@
   </div>
 
   <div class="chat-shell">
-    <div class="chat-msg user">
-      <div class="chat-avatar user">JB</div>
-      <div class="chat-bubble">Which step is our biggest bottleneck right now?</div>
-    </div>
-
-    <div class="chat-msg ai">
-      <div class="chat-avatar ai">D</div>
-      <div class="chat-bubble">
-        Based on April data, <strong>QA1 Review at 4.67 days</strong> is the biggest gap against target (2d). It's adding roughly 2.5 days to total lead time vs. plan.
-        <br/><br/>
-        <strong>Context:</strong> only 5 of 8 charts in QA Review queue moved through on time this week. POC Completion at <code>3.5d</code> is the second-biggest gap. Every other stage is at or under target.
-        <br/><br/>
-        <strong>Suggested next step:</strong> review QA capacity for the week of 04/15 &mdash; that's where most of the delay accumulated.
+    <div id="sample-exchanges">
+      <div class="chat-msg user">
+        <div class="chat-avatar user">JB</div>
+        <div class="chat-bubble">Which step is our biggest bottleneck right now?</div>
       </div>
-    </div>
 
-    <div class="chat-msg user">
-      <div class="chat-avatar user">JB</div>
-      <div class="chat-bubble">Which clinicians need coaching support?</div>
-    </div>
+      <div class="chat-msg ai">
+        <div class="chat-avatar ai">D</div>
+        <div class="chat-bubble">
+          Based on April data, <strong>QA1 Review at 4.67 days</strong> is the biggest gap against target (2d). It's adding roughly 2.5 days to total lead time vs. plan.
+          <br/><br/>
+          <strong>Context:</strong> only 5 of 8 charts in QA Review queue moved through on time this week. POC Completion at <code>3.5d</code> is the second-biggest gap. Every other stage is at or under target.
+          <br/><br/>
+          <strong>Suggested next step:</strong> review QA capacity for the week of 04/15 &mdash; that's where most of the delay accumulated.
+        </div>
+      </div>
 
-    <div class="chat-msg ai">
-      <div class="chat-avatar ai">D</div>
-      <div class="chat-bubble">
-        Clinicians A, C, and F are running significantly above the 2-day OASIS documentation target this month:
-        <br/><br/>
-        &bull; <strong>Clinician A</strong> &mdash; 24.8d avg doc time, 27% on-time across 27 charts (highest volume in the at-risk group)<br/>
-        &bull; <strong>Clinician C</strong> &mdash; 7.7d avg doc time, 0% on-time across 6 charts<br/>
-        &bull; <strong>Clinician F</strong> &mdash; 20.7d avg doc time, 0% on-time across 3 charts
-        <br/><br/>
-        For comparison, Clinicians B and D are exceeding the target (97% and 89% on-time respectively). Recommend prioritizing 1:1 coaching with Clinician A first &mdash; the volume there is driving most of the aggregate variance.
+      <div class="chat-msg user">
+        <div class="chat-avatar user">JB</div>
+        <div class="chat-bubble">Which clinicians need coaching support?</div>
+      </div>
+
+      <div class="chat-msg ai">
+        <div class="chat-avatar ai">D</div>
+        <div class="chat-bubble">
+          Clinicians A, C, and F are running significantly above the 2-day OASIS documentation target this month:
+          <br/><br/>
+          &bull; <strong>Clinician A</strong> &mdash; 24.8d avg doc time, 27% on-time across 27 charts (highest volume in the at-risk group)<br/>
+          &bull; <strong>Clinician C</strong> &mdash; 7.7d avg doc time, 0% on-time across 6 charts<br/>
+          &bull; <strong>Clinician F</strong> &mdash; 20.7d avg doc time, 0% on-time across 3 charts
+          <br/><br/>
+          For comparison, Clinicians B and D are exceeding the target (97% and 89% on-time respectively). Recommend prioritizing 1:1 coaching with Clinician A first &mdash; the volume there is driving most of the aggregate variance.
+        </div>
       </div>
     </div>
 
     <div class="chat-input">
-      <div class="field">Ask Dasha about the April pipeline...</div>
-      <span class="send-btn">Send</span>
+      <textarea id="dasha-input" class="field" placeholder="Ask Dasha about the April pipeline..." rows="1"></textarea>
+      <span class="send-btn" id="dasha-send">Send</span>
     </div>
 
     <div class="suggest-row">
@@ -122,5 +124,98 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var API = '/api/dasha';
+  var history = [];
+  var firstSent = false;
+
+  var shell = document.querySelector('.chat-shell');
+  var inputEl = document.getElementById('dasha-input');
+  var sendBtn = document.getElementById('dasha-send');
+  var samples = document.getElementById('sample-exchanges');
+  var inputRow = document.querySelector('.chat-input');
+
+  inputEl.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      doSend();
+    }
+  });
+
+  sendBtn.addEventListener('click', doSend);
+
+  document.querySelectorAll('.suggest-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sendMessage(this.textContent.trim());
+    });
+  });
+
+  function doSend() {
+    var text = inputEl.value.trim();
+    if (!text) return;
+    inputEl.value = '';
+    sendMessage(text);
+  }
+
+  function escHtml(s) {
+    return s
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function addMsg(role, html) {
+    var loading = shell.querySelector('.dasha-loading');
+    if (loading) loading.remove();
+    var msg = document.createElement('div');
+    msg.className = 'chat-msg ' + role;
+    msg.innerHTML =
+      '<div class="chat-avatar ' + role + '">' +
+      (role === 'user' ? 'JB' : 'D') +
+      '</div><div class="chat-bubble">' + html + '</div>';
+    shell.insertBefore(msg, inputRow);
+    msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function addLoading() {
+    var el = document.createElement('div');
+    el.className = 'chat-msg ai dasha-loading';
+    el.innerHTML =
+      '<div class="chat-avatar ai">D</div>' +
+      '<div class="chat-bubble" style="color:var(--muted)">Thinking&hellip;</div>';
+    shell.insertBefore(el, inputRow);
+  }
+
+  function sendMessage(text) {
+    if (!firstSent) {
+      if (samples) samples.style.display = 'none';
+      firstSent = true;
+    }
+    addMsg('user', escHtml(text));
+    addLoading();
+    fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text, history: history })
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.reply) {
+          addMsg('ai', escHtml(data.reply).replace(/\n/g, '<br>'));
+          history.push({ role: 'user', content: text });
+          history.push({ role: 'assistant', content: data.reply });
+          if (history.length > 40) history = history.slice(-40);
+        } else {
+          addMsg('ai', '<span style="color:#f87171">Something went wrong. Please try again.</span>');
+        }
+      })
+      .catch(function () {
+        addMsg('ai', '<span style="color:#f87171">Could not reach the server. Please check your connection.</span>');
+      });
+  }
+})();
+</script>
 </body>
 </html>
