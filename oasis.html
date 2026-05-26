@@ -197,7 +197,7 @@
   <div class="section-header">
     <span class="section-accent"></span>
     <h2>Cycle Time Performance &mdash; Monthly</h2>
-    <span class="section-sub">Avg OASIS documentation days vs 2d target</span>
+    <span class="section-sub">Avg OASIS documentation + SOC correction days &middot; 2d target each</span>
   </div>
 
   <div class="panel">
@@ -208,9 +208,19 @@
         <div class="bar-value">2.4d</div>
       </div>
       <div class="bar-row">
+        <div class="bar-label">Nov 2025 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 31%;"></div></div>
+        <div class="bar-value">1.2d</div>
+      </div>
+      <div class="bar-row">
         <div class="bar-label">Dec 2025</div>
         <div class="bar-track"><div class="bar-fill blue" style="width: 70%;"></div></div>
         <div class="bar-value">2.7d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Dec 2025 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 46%;"></div></div>
+        <div class="bar-value">1.8d</div>
       </div>
       <div class="bar-row">
         <div class="bar-label">Jan 2026</div>
@@ -218,9 +228,19 @@
         <div class="bar-value">3.5d</div>
       </div>
       <div class="bar-row">
+        <div class="bar-label">Jan 2026 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 51%;"></div></div>
+        <div class="bar-value">2.0d</div>
+      </div>
+      <div class="bar-row">
         <div class="bar-label">Feb 2026</div>
         <div class="bar-track"><div class="bar-fill blue" style="width: 54%;"></div></div>
         <div class="bar-value">2.1d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Feb 2026 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 38%;"></div></div>
+        <div class="bar-value">1.5d</div>
       </div>
       <div class="bar-row">
         <div class="bar-label">Mar 2026</div>
@@ -228,10 +248,26 @@
         <div class="bar-value">1.8d</div>
       </div>
       <div class="bar-row">
+        <div class="bar-label">Mar 2026 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 26%;"></div></div>
+        <div class="bar-value">1.0d</div>
+      </div>
+      <div class="bar-row">
         <div class="bar-label">Apr 2026</div>
         <div class="bar-track"><div class="bar-fill green" style="width: 42%;"></div></div>
         <div class="bar-value">1.7d</div>
       </div>
+      <div class="bar-row">
+        <div class="bar-label">Apr 2026 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 26%;"></div></div>
+        <div class="bar-value">1.0d</div>
+      </div>
+    </div>
+    <div class="spacer-sm"></div>
+    <div class="summary-row">
+      <span class="label">Legend:</span>
+      <span class="pill pill-blue">OASIS Doc</span>
+      <span class="pill pill-orange">SOC Correction</span>
     </div>
   </div>
 
@@ -300,6 +336,35 @@
 
   <div class="section-header">
     <span class="section-accent"></span>
+    <h2>Visit Type Breakdown</h2>
+    <span class="section-sub">109 charts &middot; April 2026</span>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card accent-blue">
+      <div class="kpi-label">SOC</div>
+      <div class="kpi-value">38%</div>
+      <div class="kpi-sub">41 charts</div>
+    </div>
+    <div class="kpi-card accent-purple">
+      <div class="kpi-label">ROC</div>
+      <div class="kpi-value">22%</div>
+      <div class="kpi-sub">24 charts</div>
+    </div>
+    <div class="kpi-card accent-yellow">
+      <div class="kpi-label">Recert</div>
+      <div class="kpi-value">31%</div>
+      <div class="kpi-sub">34 charts</div>
+    </div>
+    <div class="kpi-card accent-green">
+      <div class="kpi-label">Discharge</div>
+      <div class="kpi-value">9%</div>
+      <div class="kpi-sub">10 charts</div>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-accent"></span>
     <h2>Clinician Scorecard</h2>
     <span class="section-sub">Sorted by on-time rate</span>
   </div>
@@ -311,6 +376,7 @@
           <th>Clinician</th>
           <th>Charts</th>
           <th>On Time %</th>
+          <th>At Risk %</th>
           <th>Late %</th>
           <th>Avg Doc</th>
           <th>Avg Total</th>
@@ -322,6 +388,7 @@
           <td>Clinician B</td>
           <td class="num">31</td>
           <td class="num score-good">97%</td>
+          <td class="num score-good">0%</td>
           <td class="num score-good">3%</td>
           <td class="num">1.6d</td>
           <td class="num">14.1d</td>
@@ -331,6 +398,7 @@
           <td>Clinician D</td>
           <td class="num">19</td>
           <td class="num score-good">89%</td>
+          <td class="num score-warn">11%</td>
           <td class="num score-good">0%</td>
           <td class="num">0.9d</td>
           <td class="num">26.8d</td>
@@ -340,6 +408,7 @@
           <td>Clinician E</td>
           <td class="num">23</td>
           <td class="num score-warn">76%</td>
+          <td class="num score-warn">10%</td>
           <td class="num score-warn">14%</td>
           <td class="num">2.8d</td>
           <td class="num">11.7d</td>
@@ -349,6 +418,7 @@
           <td>Clinician A</td>
           <td class="num">27</td>
           <td class="num score-bad">27%</td>
+          <td class="num score-warn">6%</td>
           <td class="num score-bad">67%</td>
           <td class="num">24.8d</td>
           <td class="num">41.6d</td>
@@ -358,6 +428,7 @@
           <td>Clinician C</td>
           <td class="num">6</td>
           <td class="num score-bad">0%</td>
+          <td class="num score-warn">33%</td>
           <td class="num score-bad">67%</td>
           <td class="num">7.7d</td>
           <td class="num">32.0d</td>
@@ -367,6 +438,7 @@
           <td>Clinician F</td>
           <td class="num">3</td>
           <td class="num score-bad">0%</td>
+          <td class="num score-good">0%</td>
           <td class="num score-bad">100%</td>
           <td class="num">20.7d</td>
           <td class="num">45.7d</td>
