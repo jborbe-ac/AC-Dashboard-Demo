@@ -48,7 +48,7 @@
       <div class="dash-header-stats">
         <div class="header-stat">
           <div class="header-stat-label">Reporting Period</div>
-          <div class="header-stat-value">April 2026</div>
+          <div class="header-stat-value">Jun 2026</div>
         </div>
         <div class="header-stat">
           <div class="header-stat-label">Total Charts</div>
@@ -203,26 +203,6 @@
   <div class="panel">
     <div class="bar-chart">
       <div class="bar-row">
-        <div class="bar-label">Nov 2025</div>
-        <div class="bar-track"><div class="bar-fill blue" style="width: 62%;"></div></div>
-        <div class="bar-value">2.4d</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Nov 2025 Correction</div>
-        <div class="bar-track"><div class="bar-fill orange" style="width: 31%;"></div></div>
-        <div class="bar-value">1.2d</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Dec 2025</div>
-        <div class="bar-track"><div class="bar-fill blue" style="width: 70%;"></div></div>
-        <div class="bar-value">2.7d</div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">Dec 2025 Correction</div>
-        <div class="bar-track"><div class="bar-fill orange" style="width: 46%;"></div></div>
-        <div class="bar-value">1.8d</div>
-      </div>
-      <div class="bar-row">
         <div class="bar-label">Jan 2026</div>
         <div class="bar-track"><div class="bar-fill blue" style="width: 90%;"></div></div>
         <div class="bar-value">3.5d</div>
@@ -261,6 +241,26 @@
         <div class="bar-label">Apr 2026 Correction</div>
         <div class="bar-track"><div class="bar-fill orange" style="width: 26%;"></div></div>
         <div class="bar-value">1.0d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">May 2026</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 38%;"></div></div>
+        <div class="bar-value">1.5d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">May 2026 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 21%;"></div></div>
+        <div class="bar-value">0.8d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Jun 2026</div>
+        <div class="bar-track"><div class="bar-fill green" style="width: 36%;"></div></div>
+        <div class="bar-value">1.4d</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Jun 2026 Correction</div>
+        <div class="bar-track"><div class="bar-fill orange" style="width: 18%;"></div></div>
+        <div class="bar-value">0.7d</div>
       </div>
     </div>
     <div class="spacer-sm"></div>
@@ -337,7 +337,7 @@
   <div class="section-header">
     <span class="section-accent"></span>
     <h2>Visit Type Breakdown</h2>
-    <span class="section-sub">109 charts &middot; April 2026</span>
+    <span class="section-sub">~120 charts &middot; Jun 2026</span>
   </div>
 
   <div class="kpi-grid">
@@ -480,47 +480,41 @@
       <line x1="60" y1="53" x2="700" y2="53" stroke="#34d399" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8"/>
       <text x="700" y="48" fill="#34d399" font-size="10" font-family="Inter" font-weight="700" text-anchor="end">Target 95%</text>
 
-      <!-- Data points: Nov 78%, Dec 72%, Jan 58%, Feb 76%, Mar 84%, Apr 89% -->
-      <!-- x positions equally spaced: 100, 220, 340, 460, 580, 660 -->
+      <!-- Data: Jan 58%, Feb 76%, Mar 84%, Apr 89%, May 91%, Jun 93% -->
       <!-- y = 173 - (pct-55)*40/15 -->
-      <!-- Nov 78 -> y = 173 - 23*40/15 = 173 - 61.3 = 111.7 -->
-      <!-- Dec 72 -> y = 173 - 17*40/15 = 173 - 45.3 = 127.7 -->
-      <!-- Jan 58 -> y = 173 - 3*40/15 = 173 - 8 = 165 -->
-      <!-- Feb 76 -> y = 173 - 21*40/15 = 173 - 56 = 117 -->
-      <!-- Mar 84 -> y = 173 - 29*40/15 = 173 - 77.3 = 95.7 -->
-      <!-- Apr 89 -> y = 173 - 34*40/15 = 173 - 90.7 = 82.3 -->
-      <path d="M 100 173 L 100 112 L 220 128 L 340 165 L 460 117 L 580 96 L 660 82 L 660 173 Z"
+      <!-- Jan 58 -> 165, Feb 76 -> 117, Mar 84 -> 96, Apr 89 -> 82, May 91 -> 77, Jun 93 -> 72 -->
+      <path d="M 100 173 L 100 165 L 212 117 L 324 96 L 436 82 L 548 77 L 660 72 L 660 173 Z"
             fill="url(#oasis-area)" stroke="none"/>
-      <path d="M 100 112 L 220 128 L 340 165 L 460 117 L 580 96 L 660 82"
+      <path d="M 100 165 L 212 117 L 324 96 L 436 82 L 548 77 L 660 72"
             fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
       <g fill="#60a5fa">
-        <circle cx="100" cy="112" r="5"/>
-        <circle cx="220" cy="128" r="5"/>
-        <circle cx="340" cy="165" r="5"/>
-        <circle cx="460" cy="117" r="5"/>
-        <circle cx="580" cy="96" r="5"/>
-        <circle cx="660" cy="82" r="6" fill="#34d399"/>
+        <circle cx="100" cy="165" r="5"/>
+        <circle cx="212" cy="117" r="5"/>
+        <circle cx="324" cy="96"  r="5"/>
+        <circle cx="436" cy="82"  r="5"/>
+        <circle cx="548" cy="77"  r="5"/>
+        <circle cx="660" cy="72"  r="6" fill="#34d399"/>
       </g>
 
       <!-- Data labels -->
       <g fill="#e0f2fe" font-size="11" font-family="Inter" font-weight="700">
-        <text x="100" y="100" text-anchor="middle">78%</text>
-        <text x="220" y="116" text-anchor="middle">72%</text>
-        <text x="340" y="153" text-anchor="middle">58%</text>
-        <text x="460" y="105" text-anchor="middle">76%</text>
-        <text x="580" y="84" text-anchor="middle">84%</text>
-        <text x="660" y="70" text-anchor="middle" fill="#34d399">89%</text>
+        <text x="100" y="153" text-anchor="middle">58%</text>
+        <text x="212" y="105" text-anchor="middle">76%</text>
+        <text x="324" y="84"  text-anchor="middle">84%</text>
+        <text x="436" y="70"  text-anchor="middle">89%</text>
+        <text x="548" y="65"  text-anchor="middle">91%</text>
+        <text x="660" y="60"  text-anchor="middle" fill="#34d399">93%</text>
       </g>
 
       <!-- X axis -->
       <g fill="#6b90bf" font-size="10" font-family="Inter" font-weight="600">
-        <text x="100" y="200" text-anchor="middle">Nov 25</text>
-        <text x="220" y="200" text-anchor="middle">Dec 25</text>
-        <text x="340" y="200" text-anchor="middle">Jan 26</text>
-        <text x="460" y="200" text-anchor="middle">Feb 26</text>
-        <text x="580" y="200" text-anchor="middle">Mar 26</text>
-        <text x="660" y="200" text-anchor="middle">Apr 26</text>
+        <text x="100" y="200" text-anchor="middle">Jan 26</text>
+        <text x="212" y="200" text-anchor="middle">Feb 26</text>
+        <text x="324" y="200" text-anchor="middle">Mar 26</text>
+        <text x="436" y="200" text-anchor="middle">Apr 26</text>
+        <text x="548" y="200" text-anchor="middle">May 26</text>
+        <text x="660" y="200" text-anchor="middle">Jun 26</text>
       </g>
     </svg>
   </div>

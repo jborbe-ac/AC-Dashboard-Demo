@@ -48,7 +48,7 @@
       <div class="dash-header-stats">
         <div class="header-stat">
           <div class="header-stat-label">Reporting Period</div>
-          <div class="header-stat-value">April 2026</div>
+          <div class="header-stat-value">Jun 2026</div>
         </div>
         <div class="header-stat">
           <div class="header-stat-label">Discharges</div>
@@ -93,7 +93,7 @@
   <div class="section-header">
     <span class="section-accent"></span>
     <h2>Discharge Reason Breakdown</h2>
-    <span class="section-sub">38 patients &middot; April 2026</span>
+    <span class="section-sub">~42 patients &middot; Jun 2026</span>
   </div>
 
   <div class="panel">
@@ -157,40 +157,36 @@
       <text x="700" y="75" fill="#34d399" font-size="10" font-family="Inter" font-weight="700" text-anchor="end">Target 95%</text>
 
       <!-- Nov 89, Dec 91, Jan 88, Feb 94, Mar 96, Apr 97 -->
-      <!-- y = 173 - (pct-85)*40/5 -->
-      <!-- Nov 89 -> 173 - 4*8 = 141 -->
-      <!-- Dec 91 -> 173 - 6*8 = 125 -->
-      <!-- Jan 88 -> 173 - 3*8 = 149 -->
-      <!-- Feb 94 -> 173 - 9*8 = 101 -->
-      <!-- Mar 96 -> 173 - 11*8 = 85 -->
-      <!-- Apr 97 -> 173 - 12*8 = 77 -->
-      <path d="M 100 173 L 100 141 L 220 125 L 340 149 L 460 101 L 580 85 L 660 77 L 660 173 Z"
+      <!-- Jan 88, Feb 94, Mar 96, Apr 97, May 97, Jun 98 -->
+      <!-- y = 173 - (pct-85)*8 -->
+      <!-- Jan 88->149, Feb 94->101, Mar 96->85, Apr 97->77, May 97->77, Jun 98->69 -->
+      <path d="M 100 173 L 100 149 L 212 101 L 324 85 L 436 77 L 548 77 L 660 69 L 660 173 Z"
             fill="url(#dc-area)"/>
-      <path d="M 100 141 L 220 125 L 340 149 L 460 101 L 580 85 L 660 77"
+      <path d="M 100 149 L 212 101 L 324 85 L 436 77 L 548 77 L 660 69"
             fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
       <g fill="#34d399">
-        <circle cx="100" cy="141" r="5"/>
-        <circle cx="220" cy="125" r="5"/>
-        <circle cx="340" cy="149" r="5"/>
-        <circle cx="460" cy="101" r="5"/>
-        <circle cx="580" cy="85"  r="5"/>
-        <circle cx="660" cy="77"  r="6"/>
+        <circle cx="100" cy="149" r="5"/>
+        <circle cx="212" cy="101" r="5"/>
+        <circle cx="324" cy="85"  r="5"/>
+        <circle cx="436" cy="77"  r="5"/>
+        <circle cx="548" cy="77"  r="5"/>
+        <circle cx="660" cy="69"  r="6"/>
       </g>
       <g fill="#e0f2fe" font-size="11" font-family="Inter" font-weight="700">
-        <text x="100" y="131" text-anchor="middle">89%</text>
-        <text x="220" y="115" text-anchor="middle">91%</text>
-        <text x="340" y="139" text-anchor="middle">88%</text>
-        <text x="460" y="91" text-anchor="middle">94%</text>
-        <text x="580" y="75" text-anchor="middle">96%</text>
-        <text x="660" y="67" text-anchor="middle">97%</text>
+        <text x="100" y="139" text-anchor="middle">88%</text>
+        <text x="212" y="91"  text-anchor="middle">94%</text>
+        <text x="324" y="75"  text-anchor="middle">96%</text>
+        <text x="436" y="67"  text-anchor="middle">97%</text>
+        <text x="548" y="67"  text-anchor="middle">97%</text>
+        <text x="660" y="59"  text-anchor="middle">98%</text>
       </g>
       <g fill="#6b90bf" font-size="10" font-family="Inter" font-weight="600">
-        <text x="100" y="200" text-anchor="middle">Nov 25</text>
-        <text x="220" y="200" text-anchor="middle">Dec 25</text>
-        <text x="340" y="200" text-anchor="middle">Jan 26</text>
-        <text x="460" y="200" text-anchor="middle">Feb 26</text>
-        <text x="580" y="200" text-anchor="middle">Mar 26</text>
-        <text x="660" y="200" text-anchor="middle">Apr 26</text>
+        <text x="100" y="200" text-anchor="middle">Jan 26</text>
+        <text x="212" y="200" text-anchor="middle">Feb 26</text>
+        <text x="324" y="200" text-anchor="middle">Mar 26</text>
+        <text x="436" y="200" text-anchor="middle">Apr 26</text>
+        <text x="548" y="200" text-anchor="middle">May 26</text>
+        <text x="660" y="200" text-anchor="middle">Jun 26</text>
       </g>
     </svg>
   </div>
@@ -218,7 +214,7 @@
           <td>P-0211</td>
           <td><span class="pill pill-orange">Transfer</span></td>
           <td>Clinician A</td>
-          <td>04/20/2026</td>
+          <td>06/14/2026</td>
           <td class="num">2</td>
           <td><span class="pill pill-yellow">At Risk</span></td>
         </tr>
@@ -226,7 +222,7 @@
           <td>P-0207</td>
           <td><span class="pill pill-green">Discharge</span></td>
           <td>Clinician C</td>
-          <td>04/21/2026</td>
+          <td>06/15/2026</td>
           <td class="num">1</td>
           <td><span class="pill pill-green">On Track</span></td>
         </tr>
@@ -234,7 +230,7 @@
           <td>P-0203</td>
           <td><span class="pill pill-green">Discharge</span></td>
           <td>Clinician E</td>
-          <td>04/21/2026</td>
+          <td>06/15/2026</td>
           <td class="num">1</td>
           <td><span class="pill pill-green">On Track</span></td>
         </tr>
@@ -242,7 +238,7 @@
           <td>P-0199</td>
           <td><span class="pill pill-orange">Transfer</span></td>
           <td>Clinician B</td>
-          <td>04/22/2026</td>
+          <td>06/16/2026</td>
           <td class="num">0</td>
           <td><span class="pill pill-blue">New</span></td>
         </tr>
@@ -270,13 +266,13 @@
       </thead>
       <tbody>
         <tr style="background:rgba(96,165,250,0.07);">
-          <td colspan="6" style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;padding:6px 14px;text-transform:uppercase;">April 2026</td>
+          <td colspan="6" style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;padding:6px 14px;text-transform:uppercase;">June 2026</td>
         </tr>
         <tr>
           <td>P-0202</td>
           <td><span class="pill pill-green">Discharge</span></td>
           <td>Clinician B</td>
-          <td>04/22/2026</td>
+          <td>06/16/2026</td>
           <td class="num">2</td>
           <td>Goals Met</td>
         </tr>
@@ -284,7 +280,7 @@
           <td>P-0198</td>
           <td><span class="pill pill-orange">Transfer</span></td>
           <td>Clinician D</td>
-          <td>04/21/2026</td>
+          <td>06/15/2026</td>
           <td class="num">3</td>
           <td>Hospitalization</td>
         </tr>
@@ -292,7 +288,7 @@
           <td>P-0184</td>
           <td><span class="pill pill-green">Discharge</span></td>
           <td>Clinician E</td>
-          <td>04/19/2026</td>
+          <td>06/13/2026</td>
           <td class="num">4</td>
           <td>Goals Met</td>
         </tr>
@@ -300,7 +296,7 @@
           <td>P-0172</td>
           <td><span class="pill pill-yellow">Transfer</span></td>
           <td>Clinician B</td>
-          <td>04/17/2026</td>
+          <td>06/11/2026</td>
           <td class="num">5</td>
           <td>Higher Level of Care</td>
         </tr>
@@ -308,7 +304,7 @@
           <td>P-0165</td>
           <td><span class="pill pill-green">Discharge</span></td>
           <td>Clinician D</td>
-          <td>04/15/2026</td>
+          <td>06/09/2026</td>
           <td class="num">3</td>
           <td>Patient/Family Choice</td>
         </tr>
@@ -316,7 +312,7 @@
           <td>P-0158</td>
           <td><span class="pill pill-orange">Transfer</span></td>
           <td>Clinician E</td>
-          <td>04/14/2026</td>
+          <td>06/08/2026</td>
           <td class="num">4</td>
           <td>Hospitalization</td>
         </tr>
